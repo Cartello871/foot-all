@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг Игроков</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🏆 Рейтинг Игроков</h1>
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Позиция</th>
+            <th>Голы</th>
+            <th>Ассисты</th>
+            <th>Сейвы</th>
+            <th>Отборы</th>
+            <th>Очки</th>
+        </tr>
+        {% for player in players %}
+        <tr>
+            <td>{{ player['Имя'] }}</td>
+            <td>{{ player['Позиция'] }}</td>
+            <td>{{ player['Голы'] }}</td>
+            <td>{{ player['Ассисты'] }}</td>
+            <td>{{ player['Сейвы'] }}</td>
+            <td>{{ player['Отборы'] }}</td>
+            <td>{{ player['Очки'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
